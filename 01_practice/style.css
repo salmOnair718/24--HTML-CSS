@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+body {
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+    line-height: 1.7;
+    font-size: 14px;
+    color: #1e1e1e;
+}
+
+img {
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    width: 86.486%;
+}
+
+/* header */
+h1 {
+    text-align: center;
+    color: #1e1e1e;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 40px 0;
+}
+
+/* main */
+
+.discussion .kumon {
+    background-color: #72C9F3;
+    padding: 8px 15px 8px 15px;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+    width: 194px;
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+    padding: 25px 0 20px;
+    letter-spacing: 0.05em;
+}
+
+/* h2::before {
+    content: "KUMONが向き合うもの";
+    background-color: #72C9F3;
+    padding: 8px 15px;
+    color: #FFF;
+    font-size: 14px;
+} */
+
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    margin: 25px auto 0;
+    border-top: 2px solid #1e1e1e;
+}
+
+.top .inner {
+    background-image: url(./images/bg_main.png);
+    height: 586px;
+    margin-bottom: 100px;
+}
+
+.text {
+    background-color: #FFF;
+    width: 343px;
+    padding: 40px;
+}
+
+.recruit {
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+
+.catchCopy {
+    font-size: 36px;
+    line-height: 1.528em;
+}
+
+article {
+    margin: 50px 0;
+}
+
+article .promote::after {
+    content: "公文式教育が提供する価値を、より高めていくための取り組みとは何か？";
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+}
+
+
+.tag {
+    display: flex;
+
+}
+
+.tag li {
+    background-color: #f5f5f5;
+    padding: 5px 13px;
+    margin-right: 10px;
+    margin-top: 20px;
+
+}
+
+footer {
+    background-color: #1e1e1e;
+    color: #FFF;
+    margin-top: 50px;
+}
+
+footer ul {
+    padding: 100px 0;
+}
+
+footer li {
+    width: 370px;
+}
+
+.people {
+    border-bottom: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+    padding: 20px 0;
+}
+
+.company {
+    padding-bottom: 20px;
+}
+
+.built {
+    padding-top: 20px;
+}
+
+span {
+    padding-right: 50px;
+    width: 92px;
+    padding-left: 20px;
+}
+
+.built span {
+    padding-right: 64px;
+}
+
+small {
+    display: block;
+    font-size: 12px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+@media (min-width:640px) {
+
+    .top {
+        background-image: url(./images/bg_main.png);
+        height: 586px;
+        margin-bottom: 100px;
+    }
+
+    .top .inner {
+        background-image: none;
+    }
+
+    .post {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    article {
+        width: 46%;
+    }
+}
