@@ -200,6 +200,29 @@ img {
     text-align: center;
 }
 
+.wedo__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px;
+    background-color: #F7FAFF;
+}
+
+.wedo__item {
+    width: 30%;
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.wedo__item .btn {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* offer */
 .offer {
     padding: 80px 0;
@@ -233,3 +256,94 @@ img {
 
 /* help
 ------------------------*/
+/* transfer */
+.transfer {
+    padding: 80px;
+}
+
+.transfer__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transfer__info {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.transfer__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.transfer__item {
+    width: 30%;
+    text-align: center;
+}
+
+/* question */
+.question {
+    padding: 80px 0;
+    background-color: #123D88;
+}
+
+.question__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question__info {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #fff;
+}
+
+.question__info .unit__title {
+    color: #fff;
+}
+
+.question__info .btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* asked */
+.asked {
+    padding: 80px 0;
+}
+
+.asked__inner {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.asked__info {
+    width: 46%;
+}
+
+.asked__list {
+    width: 46%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.asked__item {
+    width: 46%;
+}

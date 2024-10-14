@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+body {
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #BBBBBB;
+    line-height: 1.75;
+    letter-spacing: 0;
+}
+
+img {
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.header {
+    text-align: center;
+}
+
+.header__inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    width: 80%;
+}
+
+.footer {
+    font-size: 12px;
+    background-color: #202124;
+}
+
+.footer__inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    width: 80%;
+}
