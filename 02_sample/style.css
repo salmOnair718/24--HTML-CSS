@@ -14,9 +14,10 @@ img {
     height: auto;
 }
 
-
+/* header */
 .header {
     text-align: center;
+    margin-top: 30PX;
 }
 
 .header__inner {
@@ -26,9 +27,11 @@ img {
     width: 80%;
 }
 
+/* footer */
 .footer {
     font-size: 12px;
     background-color: #202124;
+    padding: 100px 0 40px;
 }
 
 .footer__inner {
@@ -36,4 +39,215 @@ img {
     margin-right: auto;
     max-width: 1000px;
     width: 80%;
+}
+
+/* main  */
+.more__inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    width: 80%;
+}
+
+.more__topic {
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+.more__sub {
+    width: 47.5%;
+    margin-bottom: 60px;
+}
+
+.more__title {
+    font-size: 24px;
+    color: #202124;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    border-left: #FA6980 solid 10px;
+    padding-left: 10px;
+    line-height: 1.3;
+}
+
+.more__class {
+    font-size: 12px;
+    color: #FA6980;
+    font-style: italic;
+}
+
+.more__subtitle {
+    color: #202124;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0 15px;
+}
+
+.more__time {
+    font-size: 12px;
+    background-image: url(./03_Newslly-bem/images/icon_time.png);
+    background-repeat: no-repeat;
+    padding-left: 26px;
+    margin-top: 20px;
+}
+
+/* trend */
+.trend {
+    background-color: #F6F6F6;
+    padding: 60px;
+}
+
+.trend__inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    width: 80%;
+}
+
+.trend__team {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trend__news {
+    width: 47.5%;
+}
+
+.trend__img {
+    width: 100%;
+}
+
+.trend__title {
+    font-size: 24px;
+    color: #202124;
+    margin-bottom: 30px;
+    font-weight: bold;
+    border-left: #FA6980 solid 10px;
+    padding-left: 10px;
+    line-height: 1.3;
+}
+
+.trend__topic {
+    padding: 35px;
+    background-color: #FFF;
+}
+
+.trend__subtitle {
+    color: #202124;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 0 15px;
+}
+
+/* .trend__text {
+    margin-bottom: 25px;
+} */
+
+.trend__btn {
+    color: #FFF;
+    background-color: #FA6980;
+    padding: 14px 0;
+    width: 160PX;
+    display: block;
+    font-weight: bold;
+    margin: 25px 0 0 auto;
+    text-align: center;
+}
+
+/* about */
+.travel__inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    width: 80%;
+
+}
+
+.travel__topic {
+    margin: 60px 0 20px;
+}
+
+.travel__sub {
+    margin-bottom: 40px;
+}
+
+.travel__text {
+    margin: 15px 0 25px;
+}
+
+.travel__class {
+    font-size: 12px;
+    color: #FA6980;
+    font-style: italic;
+}
+
+.travel__subtitle {
+    color: #202124;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: #BBBBBB solid 1px;
+}
+
+.travel__btn {
+    color: #FFF;
+    background-color: #202124;
+    text-align: center;
+    padding: 14px 0;
+    width: 160PX;
+    display: block;
+    font-weight: bold;
+    margin: 25px 0 0 auto;
+}
+
+/* discovery */
+.discovery {
+    background-color: #F6F6F6;
+    padding: 60px;
+}
+
+.discovery__inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    width: 80%;
+}
+
+.discovery__title {
+    font-size: 24px;
+    color: #202124;
+    margin-bottom: 30px;
+    font-weight: bold;
+    border-left: #FA6980 solid 10px;
+    padding-left: 10px;
+    line-height: 1.3;
+}
+
+.discovery__topic {
+    padding: 35px;
+    background-color: #FFF;
+}
+
+.discovery__subtitle {
+    color: #202124;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 0 15px;
+}
+
+.discovery__time {
+    font-size: 12px;
+    background-image: url(./03_Newslly-bem/images/icon_time.png);
+    background-repeat: no-repeat;
+    padding-left: 26px;
+}
+
+.discovery__team {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discovery__news {
+    width: 30%;
 }
