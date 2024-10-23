@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+// 変数指定
+$color-ravel: #FF9900;
+$color-text: #31353B;
+$color-btn: #F85A47;
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: $color-text;
+    font-size: 15px;
+}
+
+img {
+    vertical-align: bottom;
+    height: auto;
+    max-width: 100%;
+}
+
+@mixin inner() {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    width: (1000/1440)*100%;
+}
+
+// header
+.header {
+    margin: 50px 0 80px;
+
+    &__inner {
+        @include inner();
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    &__menu {
+        display: flex;
+        text-align: right;
+    }
+
+    &__list {
+        font-size: 15px;
+        font-weight: bold;
+        padding: 4.5px 0 4.5px 30px;
+
+        span {
+            color: $color-ravel;
+        }
+    }
+}
+
+// footer
+.footer {
+    background-color: #DBFFFF;
+    padding: 100px 0;
+    text-align: center;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__menu {
+        display: flex;
+        text-align: right;
+        justify-content: right;
+    }
+
+    &__list {
+        font-size: 15px;
+        font-weight: bold;
+        padding-left: 30px;
+        text-align: right;
+
+        span {
+            color: $color-ravel;
+        }
+    }
+
+    &__copy {
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        text-align: right;
+        padding-top: 40px;
+    }
+
+}
+
+.main {
+    &__inner {
+        @include inner();
+    }
+}
+
+// index.html
+
+.office {
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+
+    &__info {
+        width: (440/1000)*100%;
+    }
+
+    &__ravel {
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-ravel;
+    }
+
+    &__title {
+        color: #000;
+        font-size: 48px;
+        padding: 20px 0 40px;
+    }
+
+    &__img {
+        width: 50%;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+    }
+
+    &__btn {
+        background-color: $color-btn;
+        color: #FFF;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 20px 0;
+        width: 200px;
+        display: block;
+    }
+}
+
+.review {
+    margin-bottom: 120px;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__ravel {
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-ravel;
+    }
+
+    &__title {
+        color: #000;
+        font-size: 48px;
+        padding: 20px 0 40px;
+    }
+
+    &__topic {
+        border: solid #a3a3a3 1px;
+        padding: 45px 40px;
+        width: (470/1000)*100%;
+        border-radius: 10px;
+    }
+
+    &__p {
+        padding-bottom: 80px;
+    }
+
+    &__boxer {
+        display: flex;
+    }
+
+    &__img {
+        width: 48PX;
+        HEIGHT: 48PX;
+    }
+
+    &__name {
+        font-weight: bold;
+        padding-bottom: 10px;
+        padding-left: 20px;
+    }
+
+
+    &__who {
+        padding-left: 20px;
+    }
+}
+
+// about.html
+.deals {
+    &__title {
+        color: #000;
+        font-size: 48px;
+        padding: 20px 0 40px;
+    }
+
+    &__text {
+        width: 600px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        margin: 60px 0 120px;
+    }
+
+    &__topic {
+        width: 30%;
+    }
+
+    &__img {
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+        background-color: $color-ravel;
+        text-align: center;
+        font-weight: bold;
+        color: #FFF;
+        padding: 20px 0;
+    }
+
+}
+
+.spaces {
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+
+    &__info {
+        width: (440/1000)*100%;
+        margin: 30px 0;
+    }
+
+    &__ravel {
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-ravel;
+    }
+
+    &__title {
+        color: #000;
+        font-size: 48px;
+        padding: 20px 0 40px;
+    }
+
+    &__img {
+        width: 50%;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+    }
+
+    &__btn {
+        background-color: $color-btn;
+        color: #FFF;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 20px 0;
+        width: 200px;
+        display: block;
+    }
+}
