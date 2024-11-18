@@ -27,6 +27,16 @@ $breakpoints: (
     align-items: $a;
 }
 
+@mixin m-title-main() {
+    margin-bottom: (60em/48
+    );
+padding-bottom: (30em/48);
+border-bottom: 2px solid;
+font-size: f-rem(48);
+font-weight: bold;
+line-height: (58/48);
+}
+
 @function f-rem($value) {
     @return ($value/16)+rem;
 }
@@ -48,15 +58,14 @@ $breakpoints: (
 
 body {
     color: $color-main;
-    font-size: f-rem(16
-    );
-font-family: 'Gill Sans',
-    'Gill Sans MT',
-    Calibri,
-    'Trebuchet MS',
-    sans-serif;
-line-height: (27/16);
-letter-spacing: 0;
+    font-size: f-rem(16);
+    font-family: 'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+    line-height: (27/16);
+    letter-spacing: 0;
 }
 
 img {
@@ -100,6 +109,38 @@ img {
     }
 }
 
+/* post */
+.post {
+    @include m-flex(flex-start);
+
+    &__pic {
+        width: 200px;
+        margin-right: (20em/16);
+
+        img {
+            width: 100%;
+            aspect-ratio: 5/3;
+            object-fit: cover;
+            object-position: center bottom;
+
+            @include m-query(desktop) {
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+
+    &__content {
+        flex: 1;
+    }
+}
+
+/* card */
+.card {
+    padding: (45em/16);
+    background-color: $color-bg;
+    text-align: center;
+}
+
 /* index.html
 ----------------------*/
 /* visual */
@@ -120,6 +161,49 @@ img {
             font-size: f-rem(48);
             font-weight: bold;
             line-height: (58/48);
+        }
+    }
+}
+
+/* about */
+.about {
+    &__inner {
+        @include m-inner();
+    }
+
+    &__title {
+        @include m-title-main();
+    }
+}
+
+/* products */
+.products {
+    &__inner {
+        @include m-inner();
+    }
+
+    &__title {
+        @include m-title-main();
+    }
+
+    &__list {
+        @include m-flex(stretch);
+        margin-bottom: -(50em/16);
+    }
+
+    &__item {
+        width: (300/640)*100%;
+        margin-bottom: (50em/16);
+
+        @include m-query(desktop) {
+            width: (300/1000)*100%;
+        }
+
+        .card__pic {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            object-position: center bottom;
         }
     }
 }
