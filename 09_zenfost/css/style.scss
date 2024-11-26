@@ -1,0 +1,353 @@
+@charset "UTF-8";
+
+$color-main: #1B2D55;
+
+$breakpoints: (
+    "desktop":"screen and (min-width:740px)",
+    ) !default;
+
+@mixin m-query($breakpoint: "desktop") {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin m-inner($w: (640/740)*100%, $mw: 1140px) {
+    width: $w;
+    max-width: $mw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin m-flex($a: center, $j: space-between) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $j;
+    align-items: $a;
+}
+
+@function f-rem($value) {
+    @return ($value/16)+rem;
+}
+
+body {
+    font-family: Verdana;
+    font-size: f-rem(14
+    );
+line-height: 1.7;
+letter-spacing: (50/24)em;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+.header {
+    &__inner {
+        @include m-inner();
+        @include m-flex;
+        padding: (60rem/16);
+
+        @include m-query() {
+            @include m-flex() {
+                justify-content: left;
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+        font-size: f-rem(16);
+
+        @include m-query() {
+            display: block;
+            @include m-flex();
+        }
+    }
+
+    &__list {
+        padding-left: (30rem/16);
+    }
+
+    &__side {
+        @include m-query() {
+            margin-left: auto;
+        }
+    }
+
+    &__humberger {
+        @include m-query() {
+            display: none;
+        }
+    }
+}
+
+.footer {
+    background-color: #E8EDF1;
+    padding: (120em/14) 0 (200em/14);
+    text-align: center;
+
+    &__inner {
+        @include m-inner()
+    }
+
+
+    &__title {
+        font-size: f-rem(36);
+        font-weight: bold;
+        font-family: Georgia;
+
+        @include m-query() {
+            text-align: left;
+        }
+    }
+
+    &__info {
+        padding: (40rem/16) 0 (60rem/16);
+
+
+        @include m-query() {
+            text-align: left;
+        }
+    }
+
+    &__set {
+        display: flex;
+    }
+
+    &__list {
+        width: 100px;
+        text-align: left;
+        align-items: center;
+    }
+
+    &__copy {
+        display: block;
+        font-weight: bold;
+
+        @include m-query() {
+            text-align: right;
+        }
+    }
+}
+
+.main {
+    &__inner {
+        @include m-inner();
+    }
+}
+
+.top {
+    background-color: #DEF6FF;
+
+    &__inner {
+        @include m-inner();
+
+        @include m-query() {
+            display: flex;
+        }
+    }
+
+    &__item {
+        padding-top: (150rem/16);
+        padding-bottom: (170rem/16);
+
+        @include m-query() {
+            position: absolute;
+            width: (640/1140)*100%;
+        }
+    }
+
+    &__catch {
+        font-size: f-rem(48);
+        font-weight: bold;
+        font-family: Georgia;
+        // padding-top: (150rem/16);
+    }
+
+    &__text {
+        padding: (80rem/16)0(40rem/16);
+    }
+
+    &__main {
+        padding: (32rem/16) 0 (60rem/16);
+        margin-left: auto;
+    }
+
+
+}
+
+.advantages {
+    padding: (120rem/16)0;
+
+    &__inner {
+        @include m-inner();
+    }
+
+    &__maru {
+        width: 38px;
+        height: 38px;
+        text-align: center;
+        border-radius: 25px;
+        background-color: #FFF5DE;
+        margin-bottom: (25rem/16);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title {
+        font-size: f-rem(48);
+        font-weight: bold;
+        font-family: Georgia;
+        text-align: center;
+    }
+
+    &__box {
+        @include m-query() {
+            @include m-flex();
+            flex-wrap: nowrap;
+            align-items: stretch;
+        }
+
+    }
+
+    &__topic {
+        padding: (80rem/16) 0;
+
+        @include m-query() {
+            width: (540/1140)*100%;
+        }
+    }
+
+    &__border {
+        border-top: solid 1px #000;
+
+        @include m-query() {
+            border-top: none;
+        }
+    }
+
+    &__pic {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: (40rem/16);
+    }
+
+
+
+    &__point {
+        font-size: f-rem(36);
+        font-weight: bold;
+        font-family: Georgia;
+    }
+
+    &__text {
+        margin: (40rem/16) 0 (80rem/16);
+    }
+
+    &__btn {
+        background-color: $color-main;
+        color: #FFF;
+        font-weight: bold;
+        padding: (20rem/16) (45rem/16);
+        margin-left: auto;
+        margin-right: auto;
+        width: 197px;
+    }
+
+
+}
+
+.features {
+    background-color: #FFF5DE;
+    padding-top: (120rem/16);
+
+    &__inner {
+        @include m-inner();
+    }
+
+    &__topic {
+        padding-bottom: (120rem/16);
+
+        @include m-query() {
+            @include m-flex();
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__second {
+        @include m-query() {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__maru {
+        width: 38px;
+        height: 38px;
+        text-align: center;
+        border-radius: 25px;
+        background-color: #DEF6FF;
+        margin-bottom: (25rem/16);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title {
+        font-size: f-rem(48);
+        font-weight: bold;
+        font-family: Georgia;
+        text-align: center;
+        padding-bottom: (80rem/16);
+    }
+
+
+    &__point {
+        font-size: f-rem(36);
+        font-weight: bold;
+        font-family: Georgia;
+    }
+
+    &__text {
+        margin-top: (40rem/16);
+    }
+
+    &__ber {
+        width: 60px;
+        border-bottom: 1px $color-main solid;
+        margin: (40rem/16) 0 (75rem/16);
+    }
+
+    &__btn {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__link {
+        background-color: #FFF;
+        border-radius: 50px;
+        font-size: f-rem(12);
+        font-weight: bold;
+        padding: (15rem/16)(30rem/16);
+        margin-right: (20rem/16);
+        margin-bottom: (20rem/16);
+        display: flex;
+    }
+
+    &__img {
+        padding-top: (60rem/16);
+
+        @include m-query() {
+            width: (580/1140)*100%;
+        }
+    }
+
+    &__box {
+        @include m-query() {
+            width: (500/1140)*100%;
+        }
+    }
+}
