@@ -1,0 +1,52 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <!-- JSを読み込む -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        /* 色指定の関数 */
+        @theme {
+            --color-main: #396;
+            --spacing-30: 30px;
+          }
+
+          /* クラス名をまとめる */
+            /* 追加 */
+      @layer components {
+        .btn {
+          @apply bg-main hover:bg-[#0f0] w-[200px] p-30 rounded-[30px] transition duration-[1s] cursor-pointer;
+        }
+      }
+        </style>
+</head>
+
+<body>
+    <h1 class="bg-main text-5xl font-bold underline">Hello,world!</h1>
+    /* <button class="text-[#FFF] bg-[#f00] hover:bg[#600] w-[200px] p-[1rem] rounded-[25px] transition duration[-300]">
+        ぼタン</button> */
+
+    /* クラス名の追加 */
+    /* プロパティのカスタマイズ */
+    <button
+        class="bg-main hover:bg-[#0f0] w-[200px] p-30 rounded-[30px] transition duration-[1s] cursor-pointer">ボタン</button>
+
+
+    <a href="#"
+        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
+            acquisitions
+            2021</h5>
+        <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions
+            of
+            2021 so far, in reverse chronological order.</p>
+    </a>
+
+</body>
+</body>
+
+</html>
